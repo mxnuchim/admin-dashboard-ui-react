@@ -3,26 +3,9 @@ import React from "react";
 import { AiOutlineMessage } from "react-icons/ai"; // Chat message icon
 import { IoChatboxEllipses } from "react-icons/io5";
 import Avatar from "../shared/Avatar";
+import { teamMembers } from "../../constants/data";
 
 const TeamInfo = () => {
-  const teamMembers = [
-    {
-      name: "Alice Johnson",
-      avatar:
-        "https://www.everypixel.com/preview_collections/20231127/people_of_the_world_vol.2_3",
-    },
-    {
-      name: "Bob Smith",
-      avatar:
-        "https://www.everypixel.com/preview_collections/20231129/people_of_the_world_vol.3_130",
-    },
-    {
-      name: "Charlie Brown",
-      avatar:
-        "https://static9.depositphotos.com/1278120/1090/i/450/depositphotos_10900960-Casual-business-woman.jpg",
-    },
-  ];
-
   return (
     <div className="shadow rounded-md py-4 w-full mx-[10%]">
       <div className="flex items-center justify-between pb-4 border-b px-4">

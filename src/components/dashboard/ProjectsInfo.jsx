@@ -36,7 +36,7 @@ const ProjectsInfo = () => {
           />
         ))}
 
-        <Addproject />
+        <AddProject />
       </ul>
     </div>
   );
@@ -44,7 +44,7 @@ const ProjectsInfo = () => {
 
 export default ProjectsInfo;
 
-const Addproject = () => {
+const AddProject = () => {
   return (
     <div className=" flex flex-col items-center justify-center p-4 rounded-[15px] shadow-sm bg-[#f0fcf9] h-[160px] w-[144px]">
       <div className=" rounded-full items-center justify-center flex p-2 mb-4">

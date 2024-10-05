@@ -1,6 +1,6 @@
 import * as React from "react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom"; // Import useLocation
 import {
   MdHome,
   MdGroup,
@@ -11,14 +11,20 @@ import {
 import { IoCalendarNumberSharp } from "react-icons/io5";
 
 const Sidebar = () => {
-  const [activeRoute, setActiveRoute] = useState("/dashboard"); // Default active route
+  const location = useLocation(); // Access the current URL
   const navigate = useNavigate(); // Hook for programmatic navigation
+  const [activeRoute, setActiveRoute] = useState(location.pathname); // Set the default route based on URL
 
   // Handle navigation and active state update
   const handleNavigation = (route) => {
     setActiveRoute(route); // Update the active route
     navigate(route); // Navigate to the selected route
   };
+
+  // Update active route based on current path (useful on reload)
+  useEffect(() => {
+    setActiveRoute(location.pathname); // Update the active route on location change
+  }, [location.pathname]);
 
   return (
     <nav className="flex flex-col items-center justify-start h-screen w-[200px] bg-white border-r shadow-lg">
