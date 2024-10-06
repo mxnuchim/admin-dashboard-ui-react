@@ -32,19 +32,25 @@ const router = createBrowserRouter([
       {
         path: "meetings",
         element: (
-          <div className="flex h-screen w-full items-center justify-center bg-white"></div>
+          <div className="flex h-screen w-full items-center justify-center bg-white">
+            <h1>Meetings</h1>
+          </div>
         ),
       },
       {
         path: "settings",
         element: (
-          <div className="flex h-screen w-full items-center justify-center bg-white"></div>
+          <div className="flex h-screen w-full items-center justify-center bg-white">
+            <h1>Settings</h1>
+          </div>
         ),
       },
       {
         path: "analytics",
         element: (
-          <div className="flex h-screen w-full items-center justify-center bg-white"></div>
+          <div className="flex h-screen w-full items-center justify-center bg-white">
+            <h1>Analytics</h1>
+          </div>
         ),
       },
     ],
